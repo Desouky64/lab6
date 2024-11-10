@@ -4,12 +4,12 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     steps:
-        -names: repo check
-         uses: action/setup-python@v4
-         with:
-           python-version: "3.8"
-          -name: install from requirments.txt
-           run: pip install -r requirments.txt
+        - names: repo check
+          uses: action/setup-python@v4
+          with:
+            python-version: "3.8"
+        - name: install from requirments.txt
+          run: pip install -r requirments.txt
 
-           -name: run test cases in job test
-           run: python -m unittest test.py
+        - name: run test cases in job test
+          run: python -m unittest calc.py
